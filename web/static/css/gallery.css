@@ -1,0 +1,18 @@
+/****************************************************************
+ *																*		
+ * 						      代码库							*
+ *                        www.dmaku.com							*
+ *       		  努力创建完善、持续更新插件以及模板			*
+ * 																*
+****************************************************************/
+.zt-gallery{
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 0 #ccc;
+    padding: 4px;
+}
+.zt-gallery .ztshortcodes-gallery{
+    border: medium none !important;
+    float: left;
+    padding: 5px 4px 0;
+}

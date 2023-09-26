@@ -1,0 +1,357 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <base href="<%=basePath%>">
+    <meta name="viewport" content="user-scalable,width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>预警中心</title>
+    <!--公用-->
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <script src="{% static 'js/echarts.min.js' %}"></script>
+    <script src="{% static 'js/template-web.js' %}"></script>
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <!--自定义-->
+    <link rel="stylesheet" href="{% static 'css/预警.css' %}">
+    <script src="{% static 'js/预警.js' %}"></script>
+    <script src="{% static 'js/loadEcharts.js' %}"></script>
+    <script>
+        $(function () {
+            main.init();
+            Echarts.init();
+        });
+    </script>
+</head>
+<body>
+    <div class="body">
+        <div class="head-box">
+            <div class="logout-box"></div>
+            <div class="link-box"></div>
+            预警中心
+            <div class="time-box">2023年5月21日</div>
+        </div>
+        <div class="main">
+            <!--left-->
+            <div class="col">
+                <!--巡查视频问题-->
+                <div class="col-box1">
+                    <div class="col-title">视频问题</div>
+                    <div class="col-main">
+                        <ul class="xcspwt-box js-xcspwt">
+                            <li>
+                                <span >预警信息</span>
+                                <span title="">老人长期站立</span>
+                                <span title="">视</span>
+                            </li>
+                            <li>
+                                <span >预警信息</span>
+                                <span title="">老人面部表情痛苦</span>
+                                <span title=""></span>
+                            </li>
+                            <li>
+                                <span >预警信息</span>
+                                <span title="">老人长期不移动</span>
+                                <span title=""></span>
+                            </li>
+                            <li>
+                                <span >预警信息</span>
+                                <span title="">老人长期看一个方向</span>
+                                <span title=""></span>
+                            </li>
+                            <li>
+                                <span>预警信息</span>
+                                <span title="">老人声音超过正常音贝</span>
+                                <span title=""></span>
+                            </li>
+                            <li>
+                                <span>预警信息</span>
+                                <span title="">老人声音超过正常音贝</span>
+                                <span title=""></span>
+                            </li>
+                            <li>
+                                <span>预警信息</span>
+                                <span title="">老人声音超过正常音贝</span>
+                                <span title=""></span>
+                            </li>
+                            <li>
+                                <span>预警信息</span>
+                                <span title="">老人声音超过正常音贝</span>
+                                <span title=""></span>
+                            </li>
+                            <li>
+                                <span>预警信息</span>
+                                <span title="">老人声音超过正常音贝</span>
+                                <span title=""></span>
+                            </li>
+                            <li>
+                                <span>预警信息</span>
+                                <span title="">老人声音超过正常音贝</span>
+                                <span title=""></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--巡查视频问题统计-->
+                <div class="col-box1">
+                    <div class="col-title">视频问题统计</div>
+                    <div class="col-main">
+                        <!--视频问题统计-->
+                        <ul class="spwtzgtj-box">
+                            <li>
+                                <span>问题总数</span>
+                                <span>234</span>
+                            </li>
+                            <li>
+                                <span>已预警</span>
+                                <span>34</span>
+                            </li>
+                            <li>
+                                <span>未预警</span>
+                                <span>200</span>
+                            </li>
+                        </ul>
+                        <!-- <div class="spwttj-echarts" id="spwttjEchart">
+
+                        </div> -->
+
+                    </div>
+                </div>
+            </div>
+            <!--center-->
+            <div class="col">
+                <!--预警信息推送-->
+                <div class="col-box1">
+                    <ul class="zpsl-box">
+                        <li>
+                            <span>今日抓拍</span>
+                            <span>1245条</span>
+                        </li>
+                        <li>
+                            <span>抓拍总数</span>
+                            <span>3421条</span>
+                        </li>
+                    </ul>
+                    <div class="col-title">预警信息推送</div>
+                    <div class="col-main js-tjxxtsxq" style="height: calc(100% - 190px);margin-top: 10px">
+                        <div class="yjxxts-box">
+                            <img src="{% static 'img/11.png' %}">
+                        </div>
+                        <div class="yjxxts-box">
+                            <img src="{% static 'img/13.png' %}">
+                        </div>
+                        <div class="yjxxts-box">
+                            <img src="{% static 'img/12.png' %}">
+                        </div>
+                    </div>
+                </div>
+                <!--预警信息统计-->
+                <div class="col-box1">
+                    <div class="col-title">预警信息统计</div>
+                    <div class="col-main ">
+                        <ul class="yjxxtj-title js-tab">
+                            <!-- <li class="on">有人统计</li>
+                            <li>无人统计</li> -->
+                        </ul>
+                        <div class="yjxxtj-box">
+                            <ul class="wgxc-box js-wgxcBox">
+                                <li>
+                                    <div class="wgxc-bar"><span class="wgxc-sl-bar" style="height:30%"></span></div>
+                                    <div class="wgxcName">5.10</div>
+                                </li>
+                                <li>
+                                    <div class="wgxc-bar"><span class="wgxc-sl-bar" style="height:59%"></span></div>
+                                    <div class="wgxcName">5.9</div>
+                                </li>
+                                <li>
+                                    <div class="wgxc-bar"><span class="wgxc-sl-bar" style="height:41%"></span></div>
+                                    <div class="wgxcName">5.8</div>
+                                </li>
+                                <li>
+                                    <div class="wgxc-bar"><span class="wgxc-sl-bar" style="height:20%"></span></div>
+                                    <div class="wgxcName">5.7</div>
+                                </li>
+                                <li>
+                                    <div class="wgxc-bar"><span class="wgxc-sl-bar" style="height:86%"></span></div>
+                                    <div class="wgxcName">5.6</div>
+                                </li>
+                                <li>
+                                    <div class="wgxc-bar"><span class="wgxc-sl-bar" style="height:67%"></span></div>
+                                    <div class="wgxcName">5.5</div>
+                                </li>
+                                <li>
+                                    <div class="wgxc-bar"><span class="wgxc-sl-bar" style="height:30%"></span></div>
+                                    <div class="wgxcName">5.4</div>
+                                </li>
+                                <li>
+                                    <div class="wgxc-bar"><span class="wgxc-sl-bar" style="height:30%"></span></div>
+                                    <div class="wgxcName">5.3</div>
+                                </li>
+                                <li>
+                                    <div class="wgxc-bar"><span class="wgxc-sl-bar" style="height:30%"></span></div>
+                                    <div class="wgxcName">6.7</div>
+                                </li>
+                                <li>
+                                    <div class="wgxc-bar"><span class="wgxc-sl-bar" style="height:30%"></span></div>
+                                    <div class="wgxcName">6.8</div>
+                                </li>
+                                <li>
+                                    <div class="wgxc-bar"><span class="wgxc-sl-bar" style="height:30%"></span></div>
+                                    <div class="wgxcName">6.9</div>
+                                </li>
+                                <li>
+                                    <div class="wgxc-bar"><span class="wgxc-sl-bar" style="height:59%"></span></div>
+                                    <div class="wgxcName">6.10</div>
+                                </li>
+                                <li>
+                                    <div class="wgxc-bar"><span class="wgxc-sl-bar" style="height:41%"></span></div>
+                                    <div class="wgxcName">6.11</div>
+                                </li>
+                                <li>
+                                    <div class="wgxc-bar"><span class="wgxc-sl-bar" style="height:20%"></span></div>
+                                    <div class="wgxcName">6.12</div>
+                                </li>
+                                <li>
+                                    <div class="wgxc-bar"><span class="wgxc-sl-bar" style="height:86%"></span></div>
+                                    <div class="wgxcName">6.13</div>
+                                </li>
+                                <li>
+                                    <div class="wgxc-bar"><span class="wgxc-sl-bar" style="height:67%"></span></div>
+                                    <div class="wgxcName">6.14</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--right-->
+            <div class="col">
+                <!--全市监控点位统计-->
+                <div class="col-box1">
+                    <div class="col-title">
+                        <!-- 全市监控点位统计 -->
+                    </div>
+                    <div class="col-main">
+                        <!-- <div class="qsjk-box" id="qsjkdwEcharts">
+                            全市监控点位-
+                        </div>  -->
+                    </div>
+                </div>
+                <!--系统公告&资源下载-->
+                <div class="col-box1">
+                    <div class="col-title">
+                        <ul class="xtggzlxz-box js-tab js-xtggzlxz">
+                            <li class="on">系统公告</li>
+                            <!-- <li>系统公告2</li> -->
+                        </ul>
+                    </div>
+                    <div class="col-main" style=" height:calc(100% - 75px);padding:20px 0;overflow: hidden">
+                        <!--资源下载-->
+                        <ul class="xcspwt-box1 js-xtggScroll">
+                            <li>
+                                2023年5月7日结果已生成
+                            </li>
+                            <li>
+                                2023年5月8日结果已发送
+                            </li>
+                            <li>
+                                2023年5月9日结果已生成
+                            </li>
+                            <li>
+                                2023年5月10日结果已发送
+                            </li>
+                            <li>
+                                2023年5月11日结果已生成
+                            </li>
+                            <li>
+                                2023年5月12日结果已发送
+                            </li>
+                            <li>
+                                2023年5月13日结果已生成
+                            </li>
+                            <li>
+                                2023年5月14日结果已发送
+                            </li>
+                            <li>
+                                2023年5月15日结果已生成
+                            </li>
+                            <li>
+                                2023年5月16日结果已发送
+                            </li>
+                            <li>
+                                2023年5月17日结果已生成
+                            </li>
+                        </ul>
+                        <!--系统公告-->
+                        <div class="xtggzlxz-main" style="display: none">
+                            <ul class="xcspwt-box1 js-xtggScroll">
+                                <li>
+                                    2023年5月7日结果已生成
+                                </li>
+                                <li>
+                                    2023年5月8日结果已发送
+                                </li>
+                                <li>
+                                    2023年5月9日结果已生成
+                                </li>
+                                <li>
+                                    2023年5月10日结果已发送
+                                </li>
+                                <li>
+                                    2023年5月11日结果已生成
+                                </li>
+                                <li>
+                                    2023年5月12日结果已发送
+                                </li>
+                                <li>
+                                    2023年5月13日结果已生成
+                                </li>
+                                <li>
+                                    2023年5月14日结果已发送
+                                </li>
+                                <li>
+                                    2023年5月15日结果已生成
+                                </li>
+                                <li>
+                                    2023年5月16日结果已发送
+                                </li>
+                                <li>
+                                    2023年5月17日结果已生成
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--预警信息推送弹框-->
+            <div class="yjxxts-tkbox js-yjxxtsTkbox">
+                <img src="{% static 'img/12.png' %}">
+                <div class="yjxxts-xqbox">
+                    <div class="col-title">详情</div>
+                    <div class="yjxxts-xqmain">
+                        <table>
+                            <tr>
+                                <td>监控点位</td>
+                                <td>客厅</td>
+                            </tr>
+                            <tr>
+                                <td>预警时间</td>
+                                <td>2023-5-10</td>
+                            </tr>
+                            <tr>
+                                <td>预警类型</td>
+                                <td>老人长摔倒</td>
+                            </tr>
+                            <tr>
+                                <td>预警状态</td>
+                                <td>已发送</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

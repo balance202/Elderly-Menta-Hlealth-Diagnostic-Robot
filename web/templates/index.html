@@ -1,0 +1,804 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Enable responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="{% static 'css/Open+Sans.css'%}" rel='stylesheet' type='text/css'>
+    <link href="{% static 'css/Roboto.css'%}" rel='stylesheet' type='text/css'>
+    <link href="{% static 'css/Sacramento.css'%}" rel='stylesheet' type='text/css'>
+    <link href="{% static 'css/Satisfy.css'%}" rel='stylesheet' type='text/css'>
+    <link href="{% static 'css/Lato.css'%}" rel='stylesheet' type='text/css'>
+
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>老人心理健康诊断机器人</title>
+    <link rel="stylesheet" href="{% static 'css/template.css'%}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/pnewsiv.css'%}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.css'%}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/owl.theme.css'%}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/css/owl.transitions.css'%}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/zt_metro.css'%}" type="text/css" />
+    <!--<link rel="stylesheet" href="css/zt_layerslider.css"  type="text/css" />-->
+    <link rel="stylesheet" href="{% static 'css/captions.css'%}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/settings.css'%}" type="text/css" />
+
+    <script src="{% static 'js/jquery.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/jquery-noconflict.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/jquery-migrate.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/caption.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/jquery.mousewheel.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/jquery.mCustomScrollbar.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/jquery.themepunch.plugins.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/jquery.themepunch.revolution.js' %}" type="text/javascript"></script>
+    <script type="text/javascript">
+      
+        (function (w, $) {
+
+            if (typeof w.zo2 === 'undefined') {
+                /* Local zo2 definition */
+                var _zo2 = {
+                    /* Common settings */
+                    _settings: {
+                        token: "246deb71c32f20871a618902483b2eb0",
+                        url: "index.php/en/",
+                        frontEndUrl: "index.html"
+                    },
+                    /* Internal jQuery */
+                    jQuery: $
+                };
+                /* Provide global zo2 object */
+                w.zo2 = _zo2;
+            }
+        })(window, jQuery.noConflict());
+        jQuery(window).on('load', function () {
+            new JCaption('img.caption');
+        });
+    </script>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" >
+    <link rel="stylesheet" href="{% static 'css/site.styles.css' %}" >
+    <link rel="stylesheet" href="{% static 'css/template.css' %}" >
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/192.css' %}" type="text/css" />
+
+
+    <style>
+
+
+</style>
+</head>
+
+<body class="homepage ltr ">
+  
+    <section class="zo2-wrapper">       
+        <section id="zo2-top-wrap" class="zo2-sticky over-opacity">
+            <div class="container">
+                <div class="row">
+                    <div id="zo2-header-logo" class="mobile-logo col-md-3 col-sm-3">
+                        <header id="standard-logo" class="zo2-logo">
+                            <a class="standard-logo-link" href="index.html" title="">
+                                <img  alt="" src="{% static 'img/bh.png' %}"/></a>
+                        </header>
+                        <header id="retina-logo" class="zo2-logo">
+                            <a class="retina-logo-link" href="{% url 'web:index' %}" title="">
+                               <!-- <img alt="" src="images/logo.png">--></a>
+                        </header>
+                    </div>
+                    <div id="zo2-mega-menu" class="mobile-menu col-md-8 col-sm-8">
+                        <nav data-zo2selectable="navbar" class="wrap zo2-menu navbar navbar-default" role="navigation">
+                            <div class="navbar-collapse collapse">
+                                <div class="zo2-megamenu animate zoom" data-duration="300" data-hover="hover">
+                                    <ul class="nav navbar-nav level-top">
+                                        <li class=" active dropdown mega" data-id="101" data-level="1">
+                                            <a class="dropdown-toggle" href="index.html" data-toggle="dropdown">首页</a>
+                                        </li>
+                                       
+                                        <li class=" dropdown mega" data-id="2" data-level="1">
+                                            <a class="dropdown-toggle" href="{% url 'web:pstest' %}" data-toggle="dropdown">心理测试<b class="caret"></b></a>
+                                           
+                                        </li>
+                                      
+                                        <li class=" dropdown mega" data-id="4" data-level="1">
+                                            <a class="dropdown-toggle" href="{% url 'web:datest' %}" data-toggle="dropdown">危险行为测试<b class="caret"></b></a>
+                                           
+                                        </li>
+                                        <li class=" dropdown mega" data-id="7" data-level="1">
+                                            <a class="dropdown-toggle" href="{% url 'web:user' %}" data-toggle="dropdown">用户<b class="caret"></b></a>
+                                         
+                                        </li>
+                                        <li class=" dropdown mega" data-id="18" data-level="1">
+                                            <a class="dropdown-toggle" href="" data-toggle="dropdown">联系我们<b class="caret"></b></a>
+                                          
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div id="zo2-position-0" class="col-md-1 col-sm-1">
+                        <div class="module ">
+                            <div class="mod-wrapper clearfix">
+                                <div class="mod-content clearfix">
+                                    <div class="mod-inner clearfix">
+                                        <div class="search">
+                                            <div class="icon-search">
+                                                <i class="fa fa-search"></i>
+                                            </div>
+                                            <div class="search-form" style="display: none">
+                                                <div class="search-close">
+                                                    <i class="fa fa-times"></i>
+                                                </div>
+                                                <form action="#" method="post" class="form-inline">
+                                                    <label for="mod-search-searchword" class="element-invisible">Search ...</label>
+                                                    <input name="keyword" id="mod-search-searchword" maxlength="200" class="inputbox search-query" type="text" size="20" value="" placeholder="请输入关键词..." />
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gap"></div>
+                    </div>
+                    <div id="zo2-canvas-menu" class="hidden-sm hidden-md hidden-lg  canvas col-md-1 col-sm-1"><span class="button-canvas"><i class="fa fa-2x fa-bars" data-toggle="offcanvas"></i></span></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="zo2-zt-slide-wrap" class="full-width noo-slideshow">
+            <div class="noo-slideshow">
+                <!-- START REVOLUTION SLIDER 4.6.3 b3 fullwidth mode -->
+                <div id="rev_slider_3_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" style="margin: 0px auto; background-color: #E9E9E9; padding: 0px; margin-top: 0px; margin-bottom: 0px; max-height: 500px;">
+                    <div id="rev_slider_3_1" class="rev_slider fullwidthabanner" style="display: none; max-height: 500px; height: 500px;">
+                        <ul>
+                            <!-- SLIDE  1-->
+                            <li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-saveperformance="off">
+                                <!-- MAIN IMAGE -->
+                                <img src="{% static 'img/background2.jpg' %}" alt="background-3" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                                <!-- LAYERS -->
+                                <!-- LAYER NR. 1 -->
+                                <div class="tp-caption very_large_text lfl tp-resizeme"
+                                    data-x="225"
+                                    data-y="170"
+                                    data-speed="500"
+                                    data-start="500"
+                                    data-easing="Power3.easeInOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="1000"
+                                   >
+                                    老人心理健康
+                                </div>
+                                <!-- LAYER NR. 2 -->
+                                <div class="tp-caption very_large_text randomrotate tp-resizeme"
+                                    data-x="545"
+                                    data-y="170"
+                                    data-speed="500"
+                                    data-start="1000"
+                                    data-easing="Power3.easeInOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="1000"
+                                    style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">
+                                   
+                                </div>
+                                <!-- LAYER NR. 3 -->
+                                <div class="tp-caption very_large_text lfr tp-resizeme"
+                                    data-x="630"
+                                    data-y="170"
+                                    data-speed="500"
+                                    data-start="1500"
+                                    data-easing="Power3.easeInOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="1000"
+                                    style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;">
+                                    诊断机器人
+                                </div>
+                                <div class="tp-caption very_large_text lfr tp-resizeme"
+                                data-x="745"
+                                data-y="170"
+                                data-speed="500"
+                                data-start="2000"
+                                data-easing="Power3.easeInOut"
+                                data-splitin="none"
+                                data-splitout="none"
+                                data-elementdelay="0.1"
+                                data-endelementdelay="0.1"
+                                data-endspeed="1000"
+                                style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;">
+                                
+                            </div>
+                                <!-- LAYER NR. 4 -->
+                                <div class="tp-caption bigblack randomrotate tp-resizeme"
+                                    data-x="429"
+                                    data-y="270"
+                                    data-speed="500"
+                                    data-start="2000"
+                                    data-easing="Power3.easeInOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="1000"
+                                    style="z-index: 8; max-width: auto; max-height: auto; white-space: nowrap;">
+                                    关注
+                                </div>
+                                <!-- LAYER NR. 5 -->
+                                <div class="tp-caption large_text lft tp-resizeme"
+                                    data-x="525"
+                                    data-y="270"
+                                    data-speed="300"
+                                    data-start="2500"
+                                    data-easing="Power3.easeInOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="1000"
+                                    style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">
+                                    &
+                                </div>
+                                <!-- LAYER NR. 6 -->
+                                <div class="tp-caption bigorange randomrotate tp-resizeme"
+                                    data-x="605"
+                                    data-y="270"
+                                    data-speed="500"
+                                    data-start="2800"
+                                    data-easing="Power3.easeInOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="1000"
+                                    style="z-index: 10; max-width: auto; max-height: auto; white-space: nowrap;">
+                                    老人
+                                </div>
+                                <!-- LAYER NR. 7 -->
+                                <div class="tp-caption large_text lft tp-resizeme"
+                                    data-x="735"
+                                    data-y="270"
+                                    data-speed="300"
+                                    data-start="3300"
+                                    data-easing="Power3.easeInOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="1000"
+                                    style="z-index: 11; max-width: auto; max-height: auto; white-space: nowrap;">
+                                    &
+                                </div>
+                                <!-- LAYER NR. 8 -->
+                                <div class="tp-caption bigwhite lft tp-resizeme"
+                                    data-x="795"
+                                    data-y="270"
+                                    data-speed="300"
+                                    data-start="3600"
+                                    data-easing="Power3.easeInOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="300"
+                                    style="z-index: 12; max-width: auto; max-height: auto; white-space: nowrap;">
+                                   心理
+                                </div>
+                            </li>
+                            <!-- SLIDE  2-->
+                            <li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-saveperformance="off">
+                                <!-- MAIN IMAGE -->
+                                <img src="{% static 'img/background2.jpg' %}" alt="background-2" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                                <!-- LAYERS -->
+
+                                <!-- LAYER NR. 1 -->
+                                <div class="tp-caption lfb"
+                                    data-x="45"
+                                    data-y="154"
+                                    data-speed="700"
+                                    data-start="500"
+                                    data-easing="Power3.easeInOut"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="1400"
+                                    style="z-index: 5;">
+                                    <!-- <img src="images/slide2-img1.png" alt=""> -->
+                                </div>
+                                <!-- LAYER NR. 2 -->
+                                <div class="tp-caption large_text sft tp-resizeme"
+                                    data-x="440"
+                                    data-y="72"
+                                    data-speed="700"
+                                    data-start="500"
+                                    data-easing="Power3.easeInOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="1400"
+                                    style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">
+                                    健康的一半是心理健康。
+                                </div>
+                                <!-- LAYER NR. 3 -->
+                                <div class="tp-caption lft"
+                                    data-x="72"
+                                    data-y="134"
+                                    data-speed="700"
+                                    data-start="1200"
+                                    data-easing="Power3.easeInOut"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="1400"
+                                    style="z-index: 7;">
+                                    <!-- <img src="images/slide2-img2.png" alt=""> -->
+                                </div>
+
+                                <!-- LAYER NR. 4 -->
+                                <div class="tp-caption large_text lft tp-resizeme"
+                                    data-x="440"
+                                    data-y="130"
+                                    data-speed="700"
+                                    data-start="1200"
+                                    data-easing="Power3.easeInOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="1400"
+                                    style="z-index: 8; max-width: auto; max-height: auto; white-space: nowrap;">
+                                    透视心灵，关注老人
+                                </div>
+
+                                <!-- LAYER NR. 5 -->
+                                <div class="tp-caption lft"
+                                    data-x="80"
+                                    data-y="134"
+                                    data-speed="700"
+                                    data-start="1900"
+                                    data-easing="Power3.easeInOut"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="1400"
+                                    style="z-index: 9;">
+                                    <!-- <img src="images/slide2-img3.png"  alt=""> -->
+                                </div>
+
+                                <!-- LAYER NR. 6 -->
+                                <div class="tp-caption medium_text tp-fade tp-resizeme"
+                                    data-x="500"
+                                    data-y="207"
+                                    data-speed="700"
+                                    data-start="1900"
+                                    data-easing="Power3.easeInOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="1000"
+                                    style="z-index: 10; max-width: auto; max-height: auto; white-space: nowrap;">
+                                    触抚生命，助人自助
+                                </div>
+                                <!-- LAYER NR. 7 -->
+                                <div class="tp-caption lft"
+                                    data-x="85"
+                                    data-y="100"
+                                    data-speed="700"
+                                    data-start="2600"
+                                    data-easing="Power3.easeInOut"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="1400"
+                                    style="z-index: 11;">
+                                    <!-- <img src="images/slide2-img4.png" alt=""> -->
+                                </div>
+                                <!-- LAYER NR. 8 -->
+                                <div class="tp-caption medium_text sft tp-resizeme"
+                                    data-x="500"
+                                    data-y="241"
+                                    data-speed="700"
+                                    data-start="2600"
+                                    data-easing="Power3.easeInOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="1400"
+                                    style="z-index: 12; max-width: auto; max-height: auto; white-space: nowrap;">
+                                </div>
+                                <!-- LAYER NR. 9 -->
+                                <div class="tp-caption lft"
+                                    data-x="110"
+                                    data-y="87"
+                                    data-speed="700"
+                                    data-start="3300"
+                                    data-easing="Power3.easeInOut"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="1400"
+                                    style="z-index: 13;">
+                                    <!-- <img src="images/slide2-img5.png" alt=""> -->
+                                </div>
+                                <!-- LAYER NR. 10 -->
+                            </li>
+                            <!-- SLIDE  3-->
+                            <li data-transition="fade" data-slotamount="7" data-masterspeed="700" data-saveperformance="off">
+                                <!-- MAIN IMAGE -->
+                                <img src="{% static 'img/background6.jpg' %}" alt="background-1" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                                <!-- LAYERS -->
+                                <!-- LAYER NR. 1 -->
+                                <div class="tp-caption large_text lft tp-resizeme"
+                                    data-x="60"
+                                    data-y="105"
+                                    data-speed="500"
+                                    data-start="500"
+                                    data-easing="Power3.easeInOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="1000"
+                                    style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
+                                    挖掘潜能，完善自我
+                                </div>
+
+                                <!-- LAYER NR. 2 -->
+                                <div class="tp-caption lft"
+                                    data-x="609"
+                                    data-y="105"
+                                    data-speed="500"
+                                    data-start="500"
+                                    data-easing="Power3.easeInOut"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="1000"
+                                    style="z-index: 6;">
+                                    <!-- <img src="images/pc.png" alt=""> -->
+                                </div>
+
+                                <!-- LAYER NR. 3 -->
+                                <div class="tp-caption large_text lft tp-resizeme"
+                                    data-x="60"
+                                    data-y="160"
+                                    data-speed="600"
+                                    data-start="1000"
+                                    data-easing="Power3.easeInOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="1200"
+                                    style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;">
+                                    心理健康，关注你我他。
+                                </div>
+
+                                <!-- LAYER NR. 4 -->
+                                <div class="tp-caption medium_text lfl tp-resizeme"
+                                    data-x="60"
+                                    data-y="232"
+                                    data-speed="500"
+                                    data-start="1500"
+                                    data-easing="Power3.easeInOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="1000"
+                                    style="z-index: 8; max-width: auto; max-height: auto; white-space: nowrap; font-size: 40px;">
+                                    
+                                </div>
+
+
+                                <!-- LAYER NR. 5 -->
+                                <div class="tp-caption lfl"
+                                    data-x="513"
+                                    data-y="263"
+                                    data-speed="500"
+                                    data-start="1500"
+                                    data-easing="Power3.easeInOut"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="1000"
+                                    style="z-index: 9;">
+                                    <!-- <img src="images/tablet.png" alt=""> -->
+                                </div>
+
+
+                                <!-- LAYER NR. 7 -->
+                                <div class="tp-caption lfr"
+                                    data-x="894"
+                                    data-y="271"
+                                    data-speed="500"
+                                    data-start="2000"
+                                    data-easing="Power3.easeInOut"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="1000"
+                                    style="z-index: 11;">
+                                    <!-- <img src="images/mobile.png" alt=""> -->
+                                </div>                             
+                            </li>
+                            <!-- SLIDE  3-->
+                            <li data-transition="fade" data-slotamount="7" data-masterspeed="700" data-saveperformance="off">
+                                <!-- MAIN IMAGE -->
+                                <img src="{% static 'img/background6.jpg' %}" alt="background-1" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                                <!-- LAYERS -->
+                                <!-- LAYER NR. 1 -->
+                                <div class="tp-caption large_text lft tp-resizeme"
+                                    data-x="60"
+                                    data-y="105"                                                                             
+                                    data-speed="500"
+                                    data-start="500"
+                                    data-easing="Power3.easeInOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="1000"
+                                    style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap; font-size: 34px;">
+                                    安全是欢乐，高兴就好
+                                </div>
+                                <!-- LAYER NR. 3 -->
+                                <div class="tp-caption large_text lft tp-resizeme"
+                                    data-x="60"
+                                    data-y="140"
+                                    data-speed="600"                                              
+                                    data-start="1000"               
+                                    data-easing="Power3.easeInOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="1200"
+                                    style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap; font-size: 14px;">
+                                    事故很悲痛，预防没错。
+                                </div>
+                                <div class="tp-caption large_text lft tp-resizeme"
+                                    data-x="60"
+                                    data-y="190"
+                                    data-speed="600"
+                                    data-start="1000"
+                                    data-easing="Power3.easeInOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="1200"
+                                    style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap; font-size: 14px;">
+                                    <img src="{% static 'img/line1.jpg' %}" alt="" />
+                                </div>
+                                <!-- LAYER NR. 4 -->
+                                <div class="tp-caption medium_text lfl tp-resizeme"
+                                    data-x="60"
+                                    data-y="232"
+                                    data-speed="500"
+                                    data-start="1500"
+                                    data-easing="Power3.easeInOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="1000"
+                                    style="z-index: 8; max-width: auto; max-height: auto; white-space: nowrap; font-size: 18px;">
+                                    
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="tp-bannertimer"></div>
+                    </div>
+
+                    <script type="text/javascript">
+                        /******************************************
+                            -	PREPARE PLACEHOLDER FOR SLIDER	-
+                        ******************************************/
+                        var setREVStartSize = function () {
+                            var tpopt = new Object();
+                            tpopt.startwidth = 1300;
+                            tpopt.startheight = 500;
+                            tpopt.container = jQuery('#rev_slider_3_1');
+                            tpopt.fullScreen = "off";
+                            tpopt.forceFullWidth = "off";
+
+                            tpopt.container.closest(".rev_slider_wrapper").css({ height: tpopt.container.height() }); tpopt.width = parseInt(tpopt.container.width(), 0); tpopt.height = parseInt(tpopt.container.height(), 0); tpopt.bw = tpopt.width / tpopt.startwidth; tpopt.bh = tpopt.height / tpopt.startheight; if (tpopt.bh > tpopt.bw) tpopt.bh = tpopt.bw; if (tpopt.bh < tpopt.bw) tpopt.bw = tpopt.bh; if (tpopt.bw < tpopt.bh) tpopt.bh = tpopt.bw; if (tpopt.bh > 1) { tpopt.bw = 1; tpopt.bh = 1 } if (tpopt.bw > 1) { tpopt.bw = 1; tpopt.bh = 1 } tpopt.height = Math.round(tpopt.startheight * (tpopt.width / tpopt.startwidth)); if (tpopt.height > tpopt.startheight && tpopt.autoHeight != "on") tpopt.height = tpopt.startheight; if (tpopt.fullScreen == "on") { tpopt.height = tpopt.bw * tpopt.startheight; var cow = tpopt.container.parent().width(); var coh = jQuery(window).height(); if (tpopt.fullScreenOffsetContainer != undefined) { try { var offcontainers = tpopt.fullScreenOffsetContainer.split(","); jQuery.each(offcontainers, function (e, t) { coh = coh - jQuery(t).outerHeight(true); if (coh < tpopt.minFullScreenHeight) coh = tpopt.minFullScreenHeight }) } catch (e) { } } tpopt.container.parent().height(coh); tpopt.container.height(coh); tpopt.container.closest(".rev_slider_wrapper").height(coh); tpopt.container.closest(".forcefullwidth_wrapper_tp_banner").find(".tp-fullwidth-forcer").height(coh); tpopt.container.css({ height: "100%" }); tpopt.height = coh; } else { tpopt.container.height(tpopt.height); tpopt.container.closest(".rev_slider_wrapper").height(tpopt.height); tpopt.container.closest(".forcefullwidth_wrapper_tp_banner").find(".tp-fullwidth-forcer").height(tpopt.height); }
+                        };
+                        /* CALL PLACEHOLDER */
+                        setREVStartSize();
+                        var tpj = jQuery;
+                        tpj.noConflict();
+                        var revapi3;
+                        tpj(document).ready(function () {
+                            if (tpj('#rev_slider_3_1').revolution == undefined) {
+                                revslider_showDoubleJqueryError('#rev_slider_3_1');
+                            } else {
+                                revapi3 = tpj('#rev_slider_3_1').show().revolution(
+                                 {
+                                     dottedOverlay: "none",
+                                     delay: 9000,
+                                     startwidth: 1300,
+                                     startheight: 500,
+                                     hideThumbs: 200,
+                                     thumbWidth: 100,
+                                     thumbHeight: 50,
+                                     thumbAmount: 3,
+                                     simplifyAll: "off",
+                                     navigationType: "bullet",
+                                     navigationArrows: "solo",
+                                     navigationStyle: "round",
+                                     touchenabled: "on",
+                                     onHoverStop: "on",
+                                     nextSlideOnWindowFocus: "off",
+                                     swipe_threshold: 75,
+                                     swipe_min_touches: 1,
+                                     drag_block_vertical: false,
+                                     keyboardNavigation: "off",
+                                     navigationHAlign: "center",
+                                     navigationVAlign: "bottom",
+                                     navigationHOffset: 0,
+                                     navigationVOffset: 20,
+                                     soloArrowLeftHalign: "left",
+                                     soloArrowLeftValign: "center",
+                                     soloArrowLeftHOffset: 20,
+                                     soloArrowLeftVOffset: 0,
+                                     soloArrowRightHalign: "right",
+                                     soloArrowRightValign: "center",
+                                     soloArrowRightHOffset: 20,
+                                     soloArrowRightVOffset: 0,
+                                     shadow: 2,
+                                     fullWidth: "on",
+                                     fullScreen: "off",
+                                     spinner: "spinner0",
+                                     stopLoop: "off",
+                                     stopAfterLoops: -1,
+                                     stopAtSlide: -1,
+                                     shuffle: "off",
+                                     autoHeight: "off",
+                                     forceFullWidth: "off",
+                                     hideThumbsOnMobile: "off",
+                                     hideNavDelayOnMobile: 1500,
+                                     hideBulletsOnMobile: "off",
+                                     hideArrowsOnMobile: "off",
+                                     hideThumbsUnderResolution: 0,
+                                     hideSliderAtLimit: 0,
+                                     hideCaptionAtLimit: 0,
+                                     hideAllCaptionAtLilmit: 0,
+                                     startWithSlide: 0,
+                                     isJoomla: true
+                                 });
+
+
+
+                            }
+                        });	/*ready*/
+
+                    </script>
+                </div>
+                <!-- END REVOLUTION SLIDER -->
+
+            </div>
+        </section>
+        
+        <section id="zo2-content-top-wrap" class="">
+            <div class="container">
+                <div class="row">
+                    <div id="zo2-position-4" class="wow fadeInUp col-md-12 col-sm-12">
+                        <div class="custom">
+                            <div class="content-top" data-scroll-reveal="enter bottom and move 150px over 1.5s" data-scroll-reveal-initialized="true">
+                                <h1 style="font-weight: bold; font-family: '微软雅黑';">
+                                    <a href="index-8.html" style="color: #272727;">$$<font style="color: #13afeb; font-family: '微软雅黑';">做什么？</font></a></h1>
+                                <hr></hr>
+                                <p style="text-align: center; line-height: 30px; font-size: 15px;">
+                                    空巢老人的出现是生活困难与当前社会竞争的加剧造成子女离开家庭，虽然大部分年轻人有赡养老人的意愿，
+                                    但为了获得更好的生活与教育和就业机会，不得不外出务工和学习，这是空巢家庭出现的最重要的原因。
+                                    关爱空巢老人生活，对于营造文明和谐的社会环境和人际关系、推动社会和谐发展具有重要意义。
+                                    本系统旨在实现对空巢老人心理上和生活上双向关注，实现和老人对话,解决外出子女对老人缺少陪伴的烦恼以及空巢老人生活上危险动作的提醒等问题。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+     
+                                            <style>
+                                                h1.like
+                                                {
+                                                    color: #fff!important;
+                                                    text-transform: uppercase;
+                                                    font-size: 30px!important;
+                                                    line-height: 40px;
+                                                    font-weight: 800!important;
+                                                    padding: 1em 0;
+                                                    margin: 0 0 0 50px;
+                                                    text-align: left;
+                                                }
+
+                                                .ticker
+                                                {
+                                                    text-transform: uppercase;
+                                                    font-weight: 300!important;
+                                                }
+                                            </style>
+                                         
+                                                <script type="text/javascript">
+                                                    jQuery(document).ready(function ($) {
+                                                        $("#zt-news-scroll-180").owlCarousel({
+                                                            lazyLoad: true,
+                                                            navigation: true,
+                                                            pagination: false,
+                                                            slideSpeed: 500,
+                                                            itemsCustom: [[320, 1], [480, 2], [640, 3], [768, 3], [1170, 3]]
+                                                        });
+                                                    });
+                                                </script>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gap"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+                                       
+
+
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            jQuery(".zo2-sticky").sticky({ topSpacing: 0 });
+        });
+    </script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/ekko-lightbox.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.sticky.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/zo2.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/site.megamenu.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/site.scripts.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/scrollrevealjs.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.masonry.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.masonry.ordered.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/Chart.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/owl.jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/lightbox.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/zt_leo.scripts.js' %}"></script>
+    <script>jQuery(document).ready(function () {}); </script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/box-content.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/counter-circle.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/accordion.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/jquery.bxslider.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/testimonial.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/carousel.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/social.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/colorbox.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/gallery.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/i.css' %}">
+
+    <script src="{% static 'js/waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.easypiechart.js' %}"></script>
+    <script src="{% static 'js/counter-circle.js' %}"></script>
+    <script src="{% static 'js/accordion.js' %}"></script>
+    <script src="{% static 'js/jquery.bxslider.min.js' %}"></script>
+    <script src="{% static 'js/testimonial.js' %}"></script>
+    <script src="{% static 'js/jquery.carouFredSel-6.2.1.js' %}"></script>
+    <script src="{% static 'js/carousel.js' %}"></script>
+    <script src="{% static 'js/jquery.colorbox.js' %}"></script>
+
+
+
+
+</body>
+</html>

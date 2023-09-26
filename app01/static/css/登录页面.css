@@ -1,0 +1,86 @@
+
+body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-image:url(../img/loginbackground.jpg);
+  }
+  
+  .form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .sjh{
+    position: absolute;
+    float: top;
+    top: 110px;
+    font-size: larger;
+    float:left;
+ left: -8px;
+  }
+  .yzm{
+    position: absolute;
+    float: top;
+    top: 210px;
+    font-size: larger;
+    float:left;
+ left: -8px;
+  }
+  .zhh{
+    position: absolute;
+    float: top;
+    top: 110px;
+    font-size: larger;
+  }
+  .mma{
+    position: absolute;
+    float: top;
+    top: 170px;
+    font-size: larger;
+  }
+ 
+  .form-signin .form-signin-heading,
+  .form-signin .checkbox {
+    margin-bottom: 10px;
+  }
+  .form-signin .checkbox {
+    font-weight: 600;
+  }
+  .form-signin .form-control {
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+    margin-left:40px;
+  }
+  .form-signin .form-control:focus {
+    z-index: 2;
+  }
+  .form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+.phone{
+  float: right;
+
+}   
+
+.container{
+  position: relative;
+  width: 400px;
+  border: 1px solid blue;
+  padding-right: 50px;
+  border-radius: 10%;
+top: 120px;
+  
+}

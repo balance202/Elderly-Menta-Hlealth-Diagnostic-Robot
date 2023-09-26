@@ -1,0 +1,632 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Enable responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>心理测试</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="{% static 'css/template.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/pnewsiv.css' %}" type="text/css" />
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/jquery-noconflict.js' %}"  type="text/javascript"></script>
+    <script src="{% static 'js/jquery-migrate.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/caption.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/mootools-core.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/core.js' %}"  type="text/javascript"></script>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/site.styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+</head>
+
+<body class="category ltr ">
+   
+    <section class="zo2-wrapper">       
+        <section id="zo2-top-wrap" class="zo2-sticky over-opacity">
+            <div class="container">
+                <div class="row">
+                    <div id="zo2-header-logo" class="mobile-logo col-md-3 col-sm-3">
+                        <header id="standard-logo" class="zo2-logo">
+                            <a class="standard-logo-link" href="{% url 'web:index' %}" title="">
+                                <img alt="" src="{% static 'img/bh.png' %}"/></a>
+                        </header>
+                        <header id="retina-logo" class="zo2-logo">
+                            <!-- <a class="retina-logo-link" href="index.htm" title="">
+                                <img alt="" src="images/logo.png"></a> -->
+                        </header>
+                    </div>
+                    <div id="zo2-mega-menu" class="mobile-menu col-md-8 col-sm-8">
+                        <nav data-zo2selectable="navbar" class="wrap zo2-menu navbar navbar-default" role="navigation">
+                            <div class="navbar-collapse collapse">
+                                <div class="zo2-megamenu animate zoom" data-duration="300" data-hover="hover">
+                                    <ul class="nav navbar-nav level-top">
+                                        <li class=" active dropdown mega" data-id="101" data-level="1">
+                                            <a class="dropdown-toggle" href="{% url 'web:index' %}" data-toggle="dropdown">首页</a>
+                                        </li>
+                                      
+                                        <li class=" dropdown mega" data-id="2" data-level="1">
+                                            <a class="dropdown-toggle" href="{% url 'web:pstest' %}" data-toggle="dropdown">心理测试<b class="caret"></b></a>
+                                            
+                                        </li>
+                                       
+                                        <li class=" dropdown mega" data-id="4" data-level="1">
+                                            <a class="dropdown-toggle" href="{% url 'web:datest' %}" data-toggle="dropdown">危险行为测试<b class="caret"></b></a>
+                                          
+                                        </li>
+                                        <li class=" dropdown mega" data-id="7" data-level="1">
+                                            <a class="dropdown-toggle" href="{% url 'web:user' %}" data-toggle="dropdown">用户<b class="caret"></b></a>
+                                            
+                                        </li>
+                                        <li class=" dropdown mega" data-id="18" data-level="1">
+                                            <a class="dropdown-toggle" href="" data-toggle="dropdown">联系我们<b class="caret"></b></a>
+                                            <div class="menu-child dropdown-menu mega-dropdown-menu">
+                                                <div class="mega-dropdown-inner">
+                                                    <div class="row">
+                                                        <div class="col-md-12 col-sm-12 mega-col-nav" data-width="12">
+                                                            <div class="mega-inner">
+                                                                <ul class="nav mega-nav level1">
+                                                                    <li class="" data-id="25" data-level="2">
+                                                                        <a href="javascript:;" target="_blank">联系方式</a></li>
+                                                                    <!-- <li class="" data-id="26" data-level="2">
+                                                                        <a href="javascript:;" target="_blank">人才招聘</a></li>                                                                     -->
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div id="zo2-position-0" class="col-md-1 col-sm-1">
+                        <div class="module ">
+                            <div class="mod-wrapper clearfix">
+                                <div class="mod-content clearfix">
+                                    <div class="mod-inner clearfix">
+                                        <div class="search">
+                                            <div class="icon-search">
+                                                <i class="fa fa-search"></i>
+                                            </div>
+                                            <div class="search-form" style="display: none">
+                                                <div class="search-close">
+                                                    <i class="fa fa-times"></i>
+                                                </div>
+                                                <form action="#" method="post" class="form-inline">
+                                                    <label for="mod-search-searchword" class="element-invisible">Search ...</label>
+                                                    <input name="keyword" id="mod-search-searchword" maxlength="200" class="inputbox search-query" type="text" size="20" value="" placeholder="请输入关键词..." />
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gap"></div>
+                    </div>
+                    <div id="zo2-canvas-menu" class="hidden-sm hidden-md hidden-lg  canvas col-md-1 col-sm-1"><span class="button-canvas"><i class="fa fa-2x fa-bars" data-toggle="offcanvas"></i></span></div>
+                </div>
+            </div>
+        </section>
+        <section id="zo2-images-top-wrap" class="full-width uns-position">
+            <div class="container-fluid">
+                <div class="row">
+                    <div id="zo2-position-3" class="col-md-12 col-sm-12" style="padding-left:0; padding-right:0;">
+                        <div class="custom">
+                            <p><img src="{% static 'img/images-top.jpg' %}"  alt="" /></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="zo2-breadcrumb-wrap" class="">
+            <div class="container">
+                <div class="row">
+                    <div id="zo2-position-2" class="breadcrumb col-md-12 col-sm-12">
+                        <ul class="breadcrumb ">
+                            <li><a href="{% url 'web:datest' %}" class="pathway">危险行为测试</a><span class="divider"><img src="{% static 'img/arrow.png' %}" alt="" /></span></li>
+                            <li><a href="{% url 'web:sxt' %}" class="pathway">摄像头</a></li>
+                            <li><a href="{% url 'web:alert' %}" class="pathway">预警中心</a></li>
+                            <!-- <li><a href="index-2.htm" class="pathway">结果查看</a></li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="zo2-body-wrap" class="containt-main">
+            <div class="container">
+                <div class="row">
+                    <div id="zo2-message" class="containt col-md-12 col-sm-12">
+                        <div id="system-message-container">
+                        </div>
+                        <section id="zo2-component-wrap" class="">
+                            <div class="container">
+                                <div class="row">
+                                    <div id="zo2-component" class="col-md-12 col-sm-12">
+                                        <div class="blog">
+                                            <h2>
+                                                <span class="subheading-category" style="font-size:24px;">心理测试</span>
+                                                <span>
+                                                    <hr></hr>
+                                                </span>
+                                            </h2>
+                                            <!-- <div class="casetag center">
+                                                <ul>
+                                                    <li class="all"><a href="index-2.htm" >aa</a></li>
+                                                    <li class=""><a href="index-3.htm" >bb</a></li>
+                                                    <li class="big"><a href="index-4.htm" >cc</a></li>
+                                                    <li class=""><a href="index-5.htm" >dd</a></li>
+                                                    <li class=""><a href="index-6.htm" >ff</a></li>
+                                                    <li class="big"><a href="index-7.htm" >gg</a></li>
+                                                </ul>
+                                            </div> -->
+                                            <style>
+                                                .casetag
+                                                {
+                                                    width: 100%;
+                                                }
+
+                                                    .casetag li
+                                                    {
+                                                        display: inline-block;
+                                                        padding: 6px;
+                                                        font-size: 12px;
+                                                        border: 1px solid #dcdcdc;
+                                                        margin-right: 3px;
+                                                        margin-bottom: 4px;
+                                                    }
+
+                                                        .casetag li a
+                                                        {
+                                                            color: #50565D;
+                                                        }
+
+                                                        .casetag li.all
+                                                        {
+                                                            font-size: 18px;
+                                                            font-weight: bold;
+                                                            padding: 3px;
+                                                        }
+
+                                                        .casetag li.hei
+                                                        {
+                                                            font-size: 18px;
+                                                            font-weight: bold;
+                                                            padding: 3px;
+                                                            background: #000;
+                                                        }
+
+                                                            .casetag li.hei a
+                                                            {
+                                                                color: #fff;
+                                                            }
+
+                                                        .casetag li.big
+                                                        {
+                                                            font-size: 24px;
+                                                            font-weight: bold;
+                                                            padding: 3px;
+                                                        }
+                                            </style>
+
+                                            <div class="items-leading-masonry row">
+                                                <div class="col-md-4 col-sm-4 leading-0" style="min-height: 400px;">
+                                                    <div class="item-page-masonry" style="min-height: 356px;">
+                                                        <div class="images">
+                                                            <div class="pull-left item-image">
+                                                                <a href="391.html">
+                                                                    <img src="{% static 'img/a.jpg' %}" alt="" itemprop="thumbnailUrl" /></a>
+                                                            </div>                                                           
+                                                            <div class=" icon-masonry" style="display: none"><a href="391.html" ><i class="fa icon-picture"></i></a></div>
+                                                        </div>
+                                                        <div class="content-text-article">                                                           
+                                                            <div class="article_content">
+                                                                <div class="page-header">
+                                                                    <h3 itemprop="name">
+                                                                        <a href="javascript:;" itemprop="url"><b>aa</b></a>
+                                                                    </h3>
+                                                                </div>
+                                                                <dl class="article-info muted">
+                                                                </dl>
+                                                                <!-- <dl class="article-info muted" style="width: 99%;">
+                                                                    <a class="itemReadmore" style="float: right;" href="391.html">查看详细</a>
+                                                                    <a class="itemReadmore" style="float: right; margin-right: 10px;" href="javascript:;"  target="_blank"></a>
+                                                                    <dt class="article-info-term"></dt>
+                                                                    <dd class="createdby" itemprop="author" itemscope itemtype=""> 
+                                                                        <span itemprop="name"><a href="javascript:;" ></a></span>	</dd>                                                 
+                                                                </dl> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 col-sm-4 items-row-masonry" style="min-height: 400px;">
+                                                    <div class="item column-1">
+                                                        <div class="item-page-masonry" style="min-height: 356px;">
+                                                            <div class="images">
+                                                                <div class="pull-left item-image">
+                                                                    <a href="405.html">
+                                                                        <img src="{%  static 'img/2020.jpg' %}"  alt="" itemprop="thumbnailUrl" /></a>
+                                                                </div>                                           
+                                                                <div class=" icon-masonry" style="display: none"><a href="javascript:;"><i class="fa icon-picture"></i></a></div>
+                                                            </div>
+                                                            <div class="content-text-article">                                                         
+                                                                <div class="article_content">
+                                                                    <div class="page-header">
+                                                                        <h3 itemprop="name">
+                                                                            <a href="javascript:;" itemprop="url"><b>h'h</b></a>
+                                                                        </h3>
+                                                                    </div>
+                                                                    <dl class="article-info muted">
+                                                                    </dl>
+                                                                    <!-- <dl class="article-info muted" style="width: 99%;">
+                                                                        <a class="itemReadmore" style="float: right;" href="405.html">查看详细</a>
+                                                                        <a class="itemReadmore" style="float: right; margin-right: 10px;" href="javascript:;" target="_blank"></a>
+                                                                        <dt class="article-info-term"></dt>
+                                                                        <dd class="createdby" itemprop="author" itemscope itemtype=""> 
+                                                                            <span itemprop="name"><a href="javascript:;"></a></span>	</dd>  
+                                                                    </dl> -->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 col-sm-4 items-row-masonry" style="min-height: 400px;">
+                                                    <div class="item column-1">
+                                                        <div class="item-page-masonry" style="min-height: 356px;">
+                                                            <div class="images">
+                                                                <div class="pull-left item-image">
+                                                                    <a href="javascript:;" >
+                                                                        <img src="{% static 'img/2021.jpg' %}"  alt="" itemprop="thumbnailUrl" /></a>
+                                                                </div>                                 
+                                                                <div class=" icon-masonry" style="display: none"><a href="javascript:;" ><i class="fa icon-picture"></i></a></div>
+                                                            </div>
+                                                            <div class="content-text-article">                                             
+                                                                <div class="article_content">
+                                                                    <div class="page-header">
+                                                                        <h3 itemprop="name">
+                                                                            <a href="javascript:;" itemprop="url"><b>ff</b></a>
+                                                                        </h3>
+                                                                    </div>
+
+                                                                    <dl class="article-info muted">
+                                                                    </dl>
+                                                                    <!-- <dl class="article-info muted" style="width: 99%;">
+                                                                        <a class="itemReadmore" style="float: right;" href="javascript:;" >ckxq</a>
+                                                                        <a class="itemReadmore" style="float: right; margin-right: 10px;" href="javascript:;" target="_blank"></a>
+                                                                        <dt class="article-info-term"></dt>
+                                                                        <dd class="createdby" itemprop="author" itemscope itemtype="">： <span itemprop="name"><a href="javascript:;" ></a></span>	</dd>                                   
+                                                                    </dl>  -->
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 col-sm-4 items-row-masonry" style="min-height: 400px;">
+                                                    <div class="item column-1">
+                                                        <div class="item-page-masonry" style="min-height: 356px;">
+                                                            <div class="images">
+                                                                <div class="pull-left item-image">
+                                                                    <a href="javascript:;">
+                                                                        <img src="{% static 'img/b .jpg' %}" alt="" itemprop="thumbnailUrl" /></a>
+                                                                </div>                            
+                                                                <div class=" icon-masonry" style="display: none"><a href="javascript:;"><i class="fa icon-picture"></i></a></div>
+                                                            </div>
+                                                            <div class="content-text-article">                             
+                                                                <div class="article_content">
+                                                                    <div class="page-header">
+                                                                        <h3 itemprop="name">
+                                                                            <a href="javascript:;" itemprop="url"><b>bb</b></a>
+                                                                        </h3>
+                                                                    </div>
+                                                                    <dl class="article-info muted">
+                                                                    </dl>
+                                                                    <!-- <dl class="article-info muted" style="width: 99%;">
+                                                                        <a class="itemReadmore" style="float: right;" href="395.html" >查ckxq</a>
+                                                                        <a class="itemReadmore" style="float: right; margin-right: 10px;" href="javascript:;" target="_blank"></a>
+                                                                        <dt class="article-info-term">查看</dt>
+                                                                        <dd class="createdby" itemprop="author" itemscope itemtype="#"> <span itemprop="name"><a href="javascript:;" ></a></span>	</dd>                                              
+                                                                    </dl>                                 -->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 col-sm-4 items-row-masonry" style="min-height: 400px;">
+                                                    <div class="item column-1">
+                                                        <div class="item-page-masonry" style="min-height: 356px;">
+                                                            <div class="images">
+                                                                <div class="pull-left item-image">
+                                                                    <a href="javascript:;">
+                                                                        <img src="{% static 'img/e.jpg' %}" alt="" itemprop="thumbnailUrl" /></a>
+                                                                </div>                                    
+                                                                <div class=" icon-masonry" style="display: none"><a href="javascript:;" ><i class="fa icon-picture"></i></a></div>
+                                                            </div>
+                                                            <div class="content-text-article">                                            
+                                                                <div class="article_content">
+                                                                    <div class="page-header">
+                                                                        <h3 itemprop="name">
+                                                                            <a href="javascript:;" itemprop="url"><b>gg</b></a>
+                                                                        </h3>
+                                                                    </div>
+                                                                    <dl class="article-info muted">
+                                                                    </dl>
+                                                                    <!-- <dl class="article-info muted" style="width: 99%;">
+                                                                        <a class="itemReadmore" style="float: right;" href="javascript:;">ckxq</a>
+                                                                        <a class="itemReadmore" style="float: right; margin-right: 10px;" href="javascript:;" target="_blank"></a>
+                                                                        <dt class="article-info-term">查看</dt>
+                                                                        <dd class="createdby" itemprop="author" itemscope itemtype=""> <span itemprop="name"><a href="javascript:;" ></a></span>	</dd>                                                    
+                                                                    </dl> -->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> 
+
+                                                 <div class="col-md-4 col-sm-4 leading-0" style="min-height: 400px;">
+                                                    <div class="item-page-masonry" style="min-height: 356px;">
+                                                        <div class="images">
+                                                            <div class="pull-left item-image">
+                                                                <a href="391.html">
+                                                                    <img src="{%static 'img/f.jpg' %}" alt="" itemprop="thumbnailUrl" /></a>
+                                                            </div>                                                           
+                                                            <div class=" icon-masonry" style="display: none"><a href="391.html" ><i class="fa icon-picture"></i></a></div>
+                                                        </div>
+                                                        <div class="content-text-article">                                                           
+                                                            <div class="article_content">
+                                                                <div class="page-header">
+                                                                    <h3 itemprop="name">
+                                                                        <a href="javascript:;" itemprop="url"><b>qq</b></a>
+                                                                    </h3>
+                                                                </div>
+                                                                <dl class="article-info muted">
+                                                                </dl>
+                                                                <!-- <dl class="article-info muted" style="width: 99%;">
+                                                                    <a class="itemReadmore" style="float: right;" href="391.html">ckxq</a>
+                                                                    <a class="itemReadmore" style="float: right; margin-right: 10px;" href="javascript:;"  target="_blank"></a>
+                                                                    <dt class="article-info-term"></dt>
+                                                                    <dd class="createdby" itemprop="author" itemscope itemtype=""> 
+                                                                        <span itemprop="name"><a href="javascript:;" ></a></span>	</dd>                                                 
+                                                                </dl> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="clear"></div>
+                                            <div class="list_pages">
+                                                <ul>
+                                                    <li>老人心理健康诊断机器人</li>
+                                                   
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+      
+                                        <style>
+                                            #zo2-bottom-2-wrap p a
+                                            {
+                                                color: #C3C0C0;
+                                                font-weight: normal;
+                                            }
+
+                                                #zo2-bottom-2-wrap p a:hover, #zo2-bottom-2-wrap a:hover span
+                                                {
+                                                    color: #fff;
+                                                }
+                                        </style>
+
+                                        <style rel="stylesheet" type="text/css">
+                                            .zt-social-networks > a
+                                            {
+                                                {#border-radius: ;#}
+                                            }
+                                        </style>
+
+                                        
+                                            <script language="javascript">
+                                                //表单判断
+                                                function check1(theForm) {
+                                                    if (theForm.name.value == "") {
+                                                        alert("请输入姓名");
+                                                        theForm.name.focus();
+                                                        return (false);
+                                                    }
+                                                    if (theForm.email.value == "") {
+                                                        alert("请输入电子邮箱");
+                                                        theForm.email.focus();
+                                                        return (false);
+                                                    }
+                                                    if (theForm.phone.value == "") {
+                                                        alert("请输入手机号码");
+                                                        theForm.phone.focus();
+                                                        return (false);
+                                                    }
+                                                }
+                                            </script>
+                                           
+                                                <script language="JavaScript" type="text/javascript">
+                                                    function GetDateStr(AddDayCount) {
+                                                        var dd = new Date();
+                                                        //dd.setDate(dd.getDate()+AddDayCount);//获取AddDayCount天后的日期
+                                                        var y = dd.getFullYear();
+                                                        var m = dd.getMonth() + 1;//获取当前月份的日期
+                                                        var d = dd.getDate();
+                                                        var h = dd.getHours();
+                                                        var i = dd.getMinutes();
+                                                        return y + "年" + m + "月" + d + "日" + h + "时" + i + "分";
+                                                    }
+                                                    document.write("<input type=hidden name=sendtime id=sendtime value=" + GetDateStr(0) + " />");
+
+                                                </script>
+                                                
+                                                    <style>
+                                                        #contact-form #submit1, #contact-form #submit1:focus, #contact-form #submit1:hover
+                                                        {
+                                                            background: #286090;
+                                                            margin-top: 10px;
+                                                            color: #fff;
+                                                            border: none;
+                                                            border: 0;
+                                                        }
+                                                    </style>
+
+                            </section>
+                            <a href="javascript:;" id="gototop" title="Go to top"><i class="fa fa-chevron-up"></i></a>
+                            <script>
+                                jQuery("#gototop").click(function () {
+                                    jQuery("body, html").animate({ scrollTop: 0 });
+                                    return false;
+                                });
+                            </script>
+                        </footer>
+                    </div>
+
+                   
+                        <style>
+                            #zo2-language ul
+                            {
+                                float: right;
+                                margin-top: 30px;
+                                font-size: 14px;
+                            }
+
+                            #zo2-language li
+                            {
+                                width: 60px;
+                                text-align: center;
+                                color: #fff;
+                                line-height: 28px;
+                                float: left;
+                                list-style: none;
+                                margin-left: 20px;
+                                _display: inline;
+                            }
+                        </style>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+
+    
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            jQuery(".zo2-sticky").sticky({ topSpacing: 0 });
+        });
+    </script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}" ></script>
+    <script type="text/javascript" src="{% static 'js/ekko-lightbox.js' %}" ></script>
+    <script type="text/javascript" src="{% static 'js/jquery.sticky.js' %}" ></script>
+    <script type="text/javascript" src="{% static 'js/zo2.js' %}" ></script>
+    <script type="text/javascript" src="{% static 'js/site.megamenu.js' %}" ></script>
+    <script type="text/javascript" src="{% static 'js/site.scripts.js' %}" ></script>
+    <script type="text/javascript" src="{% static 'js/custom.js' %}" ></script>
+    <script type="text/javascript" src="{% static 'js/scrollrevealjs.js' %}" ></script>
+    <script type="text/javascript" src="{% static 'js/jquery.masonry.js' %}" ></script>
+    <script type="text/javascript" src="{% static 'js/jquery.masonry.ordered.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/Chart.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/owl.jquery.js' %}" ></script>
+    <script type="text/javascript" src="{% static 'js/lightbox.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/zt_leo.scripts.js' %}"></script>
+    <script>jQuery(document).ready(function () {}); </script>
+    <link rel="stylesheet" type="text/css" href="{% static 'font-awesome.min-2.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'social.css' %}" >
+    <link rel="stylesheet" type="text/css" href="{% static 'colorbox.css' %}" >
+    <link rel="stylesheet" type="text/css" href="{% static 'gallery.css' %}" >
+    <link rel="stylesheet" type="text/css" href="{% static 'i.css' %}">
+    <script src="{% static 'jquery.colorbox.js' %}"></script>
+
+</body>
+
+
+<style>
+    /*分页*/
+    .list_pages
+    {
+        text-align: center;
+        height: 52px;
+        margin-top: 20px;
+    }
+
+        .list_pages ul
+        {
+        }
+
+            .list_pages ul li
+            {
+                float: none;
+                width: auto;
+                padding: 4px 8px;
+                border: 1px solid #eee;
+                background-color: #eee;
+                display: inline-block;
+                zoom: 1;
+                *display: inline;
+                margin: 0 2px;
+            }
+
+                .list_pages ul li a
+                {
+                    color: #606060;
+                }
+
+                    .list_pages ul li a:hover
+                    {
+                        color: #000000;
+                    }
+
+                .list_pages ul li.thisclass, .list_pages ul li.thisclass a, .list_pages ul li.thisclass a:hover
+                {
+                    background-color: #3498DB;
+                    color: #fff;
+                    border: 1px solid #3498DB;
+                }
+
+        .list_pages .pageinfo
+        {
+            padding: 4px 10px;
+            color: #555;
+            font-weight: normal;
+            float: none;
+        }
+
+            .list_pages .pageinfo strong
+            {
+                color: #555;
+                font-weight: normal;
+            }
+
+        .list_pages select
+        {
+            font: 12px Verdana,Arial,Tahoma;
+            vertical-align: middle;
+        }
+
+    .article_content dd.createdby::after
+    {
+        content: "";
+    }
+</style>
+</html>

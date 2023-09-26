@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>摄像头</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>摄像头画面</h1>
+        <video id="video" width="640" height="480" autoplay></video>
+    </div>
+
+    <script>
+        navigator.mediaDevices.getUserMedia({ video: true })
+           .then(function(stream) {
+                var video = document.getElementById('video');
+                video.srcObject = stream;
+                video.play();
+            })
+            .catch(function(err) {
+                console.log("Error: " + err);
+            });
+    </script>
+</body>
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Camera Example</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Camera Example</h1>
+        <video id="video" width="640" height="480" autoplay></video>
+    </div>
+
+    <script>
+        navigator.mediaDevices.getUserMedia({ video: true })
+           .then(function(stream) {
+                var video = document.getElementById('video');
+                video.srcObject = stream;
+                video.play();
+            })
+            .catch(function(err) {
+                console.log("Error: " + err);
+            });
+    </script>
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+</body> -->
+</html>
