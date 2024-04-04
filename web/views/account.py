@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+ #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 """
 用户账户相关功能：注册、短信、登录、注销
